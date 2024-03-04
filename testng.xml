@@ -4,8 +4,8 @@
 	<test name="chrome" parallel="true" thread-count="5">
 	<parameter name="browser" value="chrome"></parameter>
 		<classes>
-			<class name="com.pos.testcases.CreateNewVendor" />
-		   	<class name="com.pos.testcases.EditVendor" />
+			<class name="com.pos.testcases.CreateNewCutomer" />
+		   	<!--<class name="com.pos.testcases.EditVendor" />-->
 			<!--<class name="com.pos.testcases.DeleteVendor" />
 			<class name="com.pos.testcases.CreateNewProduct" />
 			<class name="com.pos.testcases.EditProduct" />
@@ -19,7 +19,7 @@
 	<parameter name="browser" value="firefox"></parameter>
 		<classes>
 			<class name="com.pos.testcases.CreateNewCutomer" />
-		   	<class name="com.pos.testcases.EditCustomer" />
+		   	<!--<class name="com.pos.testcases.EditCustomer" />-->
 			<!-- <class name="com.pos.testcases.DeleteCustomer" /> -->
 			
 		</classes>

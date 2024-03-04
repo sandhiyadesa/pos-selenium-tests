@@ -2,16 +2,21 @@ package com.pos.pages;
 
 import com.framework.selenium.api.design.Locators;
 import com.framework.testng.api.base.ProjectSpecificMethods;
+import com.github.javafaker.Faker;
 
 public class NewCustomersPage extends ProjectSpecificMethods {
 
 	public NewCustomersPage enterCustomerId(String customerId) {
-		clearAndType(locateElement(Locators.XPATH, "//label[text()='Customer Id']/following::input"), customerId);
+		Faker faker=new Faker();
+		String custID=faker.number().digits(8);
+		clearAndType(locateElement(Locators.XPATH, "//label[text()='Customer Id']/following::input"), custID);
 		reportStep(customerId+"Customer Id is entered successfully", "pass");
 		return this;
 	}
 	public NewCustomersPage enterCustomerName(String customerName) {
-		clearAndType(locateElement(Locators.XPATH, "//label[text()='Customer Name']/following::input"), customerName);
+		Faker faker=new Faker();
+		String custName=faker.name().firstName();
+		clearAndType(locateElement(Locators.XPATH, "//label[text()='Customer Name']/following::input"), custName);
 		reportStep(customerName+"Customer Name is entered successfully", "pass");
 		return this;
 	}
@@ -31,7 +36,9 @@ public class NewCustomersPage extends ProjectSpecificMethods {
 		return this;
 	}
 	public NewCustomersPage enterEmailId(String emailId) {
-		clearAndType(locateElement(Locators.XPATH, "//label[text()='Email Id']/following::input"), emailId);
+		Faker faker=new Faker();
+		String emailid=faker.internet().emailAddress();
+		clearAndType(locateElement(Locators.XPATH, "//label[text()='Email Id']/following::input"), emailid);
 		reportStep(emailId+"Email Id is entered successfully", "pass");
 		return this;
 	}
