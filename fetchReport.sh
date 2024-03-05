@@ -10,7 +10,11 @@ if [ -d "$directory" ]; then
     echo "Folders created in $directory:"
     for folder in "$directory"/*/; do
         folder_name=$(basename "$folder")
-        echo "$folder_name"
+    # Construct the URL with the variable
+    url="https://myprjectreport.s3.ap-northeast-1.amazonaws.com/reports/$folder_name/result.html"
+    # Export the url variable
+    echo url
+    export url
         # You can perform further operations with $folder_name here
     done
 else
