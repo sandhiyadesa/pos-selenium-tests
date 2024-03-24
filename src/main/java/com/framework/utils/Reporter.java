@@ -39,7 +39,8 @@ public abstract class Reporter extends DriverInstance {
 	@BeforeSuite(alwaysRun = true)
 	public synchronized void startReport() throws IOException {
 		String date = new SimpleDateFormat(pattern).format(new Date());
-		folderName = "reports/" + date;
+		//folderName = "reports/" + date;
+		folderName = "reports/";
 
 		File folder = new File("./" + folderName);
 		if (!folder.exists()) {
